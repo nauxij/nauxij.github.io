@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的视频分享站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .video-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .video-card h3 {
+            padding: 1rem;
+            background-color: #f6f8fa;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #6a737d;
+            border-top: 1px solid #e1e4e8;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的视频分享站</h1>
+        <p>记录生活，分享美好</p>
+    </header>
+    <div class="container">
+        <div class="video-card">
+            <h3>8022</h3>
+            <div class="video-container">
+                <video controls autoplay muted loop poster="cover1.jpg">
+                    <source src="8022.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </div>
+        <div class="video-card">
+            <h3>你咋那么美</h3>
+            <div class="video-container">
+                <video controls autoplay muted loop poster="cover2.jpg">
+                    <source src="你咋那么美.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 我的视频分享站 | 托管于 Gitee Pages</p>
+    </footer>
+</body>
+</html>
