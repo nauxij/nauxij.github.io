@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的视频集</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #1f2937, #111827);
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.video-card {
+  background: #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  cursor: pointer;
+}
+.video-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 5;
+}
+.video-container video,
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  display: none;
+  border: none;
+}
+.fullscreen-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+.fullscreen-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>我的视频集</h1>
+  <p>生活片段 · 美好记录</p>
+</header>
+<div class="container">
+  <div class="video-card">
+    <div class="video-container" onclick="playLocalVideo('v1', this)">
+      <img class="video-cover" src="cover1.jpg" alt="封面1">
+      <video id="v1" controls playsinline allowfullscreen>
+        <source src="你咋那么美.mp4" type="video/mp4"> 您的浏览器不支持播放视频
+      </video>
+      <button class="fullscreen-btn" onclick="goFull('v1')">全屏</button>
+    </div>
+  </div>
+
+  <div class="video-card">
+    <div class="video-container" onclick="playLocalVideo('v2', this)">
+      <img class="video-cover" src="cover2.jpg" alt="封面2">
+      <video id="v2" controls playsinline allowfullscreen>
+        <source src="爹娘恩.mp4" type="video/mp4"> 您的浏览器不支持播放视频
+      </video>
+      <button class="fullscreen-btn" onclick="goFull('v2')">全屏</button>
+    </div>
+  </div>
+
+  <div class="video-card">
+    <div class="video-container" onclick="playBilibili(this)">
+      <img class="video-cover" src="cover3.jpg" alt="封面3">
+      <iframe id="bilibili" class="bilibili-frame"
+        src="//player.bilibili.com/player.html?bvid=BV1PgPkzHEFd&autoplay=0"
+        scrolling="no"
+        allowfullscreen="true"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true">
+      </iframe>
+      <button class="fullscreen-btn" onclick="goFull('bilibili')">全屏</button>
+    </div>
+  </div>
+</div>
+<footer>
+  © 2026 我的视频站
+</footer>
+
+<script>
+function goFull(id) {
+  const elem = document.getElementById(id);
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
+function playLocalVideo(id, el) {
+  const cover = el.querySelector('.video-cover');
+  const video = document.getElementById(id);
+  const btn = el.querySelector('.fullscreen-btn');
+  
+  cover.style.display = 'none';
+  video.style.display = 'block';
+  btn.style.display = 'block';
+  video.play().catch(err => console.log(err));
+}
+
+function playBilibili(el) {
+  const cover = el.querySelector('.video-cover');
+  const iframe = el.querySelector('.bilibili-frame');
+  const btn = el.querySelector('.fullscreen-btn');
+  
+  cover.style.display = 'none';
+  iframe.style.display = 'block';
+  btn.style.display = 'block';
+}
+</script>
+</body>
+</html>
