@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>我的世界</title>
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: url('https://gitee.com/x21y/nauxij.github.io/raw/main/1773451522775.png') center/cover fixed;
+    color: #fff;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+/* 半透明遮罩层（调浅了） */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+}
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: rgba(200, 80, 40, 0.5);
+    backdrop-filter: blur(8px);
+}
+header h1 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+header p {
+    color: #d1d5db;
+    font-size: 1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.video-card {
+    background: rgba(200, 80, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video-container iframe,
+.video-container video,
+.video-container audio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.video-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000 center/cover;
+    cursor: pointer;
+    z-index: 5;
+}
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,255,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+.play-btn::after {
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 26px solid #fff;
+}
+.fullscreen-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    border: 0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 10;
+}
+/* 音频卡片专用样式（保持和视频一致） */
+.audio-card {
+    background: rgba(200, 80, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem;
+}
+.audio-container {
+    width: 100%;
+}
+.audio-container audio {
+    width: 100%;
+}
+.audio-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.audio-error {
+    color: #ff6666;
+    text-align: center;
+    margin-top: 8px;
+    display: none;
+}
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #d1d5db;
+    font-size: .9rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <h1>我的视频集</h1>
+            <p>生活片段 · 美好记录</p>
+        </header>
+        <div class="container"><!-- ========== B 站视频 1（封面固定为 cover2.jpg） ========== -->
+            <div class="video-card">
+                <div class="video-container">
+                    <div class="video-cover" onclick="playBilibili(this)" style="background-image: url('cover2.jpg') !important;">
+                        <div class="play-btn"></div>
+                    </div> <iframe class="bili-iframe" src="//player.bilibili.com/player.html?aid=116203427201779&amp;bvid=BV1oaPZznEbP&amp;cid=36594713387&amp;p=1&amp;autoplay=0" scrolling="no" frameborder="no" allowfullscreen> </iframe>
+                </div>
+            </div> <!-- ========== 本地视频 ========== -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video id="v-local" controls playsinline allowfullscreen poster="cover1.jpg"><source src="妈和二姐.mp4" type="video/mp4"> 您的浏览器不支持播放
+                    </video> <button class="fullscreen-btn" onclick="goFull('v-local')">全屏</button>
+                </div>
+            </div> <!-- ========== 本地 FLAC 音乐（和仓库文件名完全匹配） ========== -->
+            <div class="audio-card">
+                <div class="audio-title">
+                    江湖夜雨十年灯 - 空想之喵
+                </div>
+                <div class="audio-container">
+                    <audio id="myAudio" controls><!-- 路径与仓库文件名完全一致 --> <source src="江湖夜雨十年灯 - 空想之喵.flac" type="audio/flac"> 您的浏览器不支持播放 FLAC 音频 
+                        <div id="audioError" class="audio-error"></div>
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <footer>
+            © 2026 我的视频站
+        </footer>
+        <script>
+// 全屏
+function goFull(id) {
+  const el = document.getElementById(id);
+  if (el.requestFullscreen) el.requestFullscreen();
+  else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+  else if (el.msRequestFullscreen) el.msRequestFullscreen();
+}
+
+// 点击播放 B 站（通用）
+function playBilibili(cover) {
+  const iframe = cover.nextElementSibling;
+  iframe.src = iframe.src.replace('&autoplay=0', '&autoplay=1');
+  cover.style.display = 'none';
+}
+
+// ========== 自动加载 B 站封面 ==========
+document.addEventListener('DOMContentLoaded', () => {
+  const iframes = document.querySelectorAll('.bili-iframe');
+  iframes.forEach(iframe => {
+    const src = iframe.src;
+    const bvidMatch = src.match(/bvid=([^&]+)/);
+    if (!bvidMatch) return;
+    const bvid = bvidMatch[1];
+    const coverUrl = `https://picsum.photos/seed/${bvid}/1280/720`;
+    
+    const cover = iframe.previousElementSibling;
+    if (cover && cover.classList.contains('video-cover') && !cover.style.backgroundImage) {
+      cover.style.backgroundImage = `url(${coverUrl})`;
+    }
+  });
+
+  // 音频错误监听
+  const audio = document.getElementById('myAudio');
+  const audioError = document.getElementById('audioError');
+  if (audio) {
+    audio.addEventListener('error', () => {
+      const err = audio.error;
+      let msg = '音频加载失败：';
+      if (err.code === 4) msg = '格式不支持（建议转 MP3）';
+      else if (err.code === 2) msg = '文件不存在/路径错误';
+      else msg = '未知错误（代码：' + err.code + '）';
+      audioError.textContent = msg;
+      audioError.style.display = 'block';
+    });
+    audio.addEventListener('loadstart', () => audioError.style.display = 'none');
+  }
+});
+</script>
+    </body>
+</html>
