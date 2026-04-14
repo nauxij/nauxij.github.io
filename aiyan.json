@@ -57,7 +57,7 @@
     "sites": [
         {
             "key": "壹路坦途",
-            "name": "%E6%88%91%E4%B8%8D%E6%B1%82%E5%95%A5%EF%BC%8C%E5%8F%AA%E6%B1%82%E4%B8%89%E5%A4%A9%E4%B8%80%E6%AC%A1%E4%B8%8A%E7%8F%AD%E9%99%AA%E4%BD%A0%E4%B8%80%E7%A8%8B",
+            "name": "%E6%88%91%E4BC%8C%E5%8F%AA%E6%B%8B",
             "type": 3,
             "api": "csp_Douban",
             "searchable": 0,
