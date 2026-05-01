@@ -14,7 +14,7 @@
         {
             "name": "iptv酷9",
             "type": 0,
-            "url": "http://8863.kstore.vip/ku9mb/mbTV/ku9mb.txt",
+            "url": "https://github.com/vbskycn/iptv/raw/master/tv/iptv4.txt",
             "logo": "https://gitee.com/x21y/hh/raw/master/{name}.png",
             "playerType": 2
         },
