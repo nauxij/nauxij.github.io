@@ -38,7 +38,7 @@
         {
             "name": "无损音乐",
             "type": 0,
-            "url": "https://nauxij.github.io//我要歌.M3U",
+            "url": "https://raw.giteeusercontent.com/x21y/nauxij.github.io/raw/main/%E6%88%91%E8%A6%81%E6%AD%8C.M3U?metadata=eyJyIjoibWFpbiIsImZwIjoi5oiR6KaB5q2MLk0zVSIsInVpZCI6MTQyMTc4MjIsInBpZCI6NDYyMDc4NTEsInN0byI6ImdpdC1zaGFyZGluZy1zdG8tMTB0LTAyNSIsInJwIjoicmVwb3MvZjYvZGUvZjZkZTE5M2FjZGI2ODk2NDU3YjNkNzhhNzExYzlhZWM4ZmI0ZGRkYmE4NWYzODM1NjMwZmZjYWFiOGM5ODc3MC5naXQiLCJleHBpcmVfYXQiOjE3Nzc3MDU4MDB9&signature=pqFWkcNuXchhchmqxWprlyFMNDnpmI9fX7OlmG46L0Q",
             "playerType": 2,
             "ua": "okhttp/3",
             "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
