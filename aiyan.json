@@ -38,7 +38,7 @@
         {
             "name": "无损音乐",
             "type": 0,
-            "url": "",
+            "url": "https://nauxij.github.io/我要歌.M3U",
             "playerType": 2,
             "ua": "okhttp/3",
             "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
