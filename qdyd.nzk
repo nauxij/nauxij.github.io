@@ -30,7 +30,7 @@ CCTV17,http://192.151.150.154/live/cctv17hd.m3u8
 CCTV17,http://118.122.144.115:8888/newlive/live/hls/17/live.m3u8
 山东文旅,http://123.235.61.39:4000/rtp/239.253.254.160:8000
 星河,https://o11.163189.xyz/stream/live/tvbxh/
-天津文艺,http://38.75.136.137:98/gslb/dsdqpub/tjtv2.m3u8?auth=testpub
+天津文艺,http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub
 北京文艺,http://k.061899.xyz/m.php?id=bjwy#http://38.75.136.137:98/gslb/dsdqpub/btv2.m3u8?auth=testpub#http://106.53.99.30/tv/bj.php?id=bjwy
 龙华电影,http://iptv.4666888.xyz/iptv2A.php?id=45
 龙华电影,http://rihou.cc:555/tv/[Pd]龙华电影
