@@ -21,12 +21,12 @@ CCTV11,http://38.75.136.137:98/gslb/dsdqpub/cctv11hd.m3u8?auth=testpub
 CCTV12,http://38.75.136.137:98/gslb/dsdqpub/cctv12hd.m3u8?auth=testpub
 
 河南曲艺,http://1.94.31.214/php/hntv.php?id=jczy
-北京影视,http://106.53.99.30/tv/bj.php?id=bjys
+兵器科技,http://38.75.136.137:98/gslb/dsdqpub/gfjs.m3u8?auth=testpub
 CCTV17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 星河,https://o11.163189.xyz/stream/live/tvbxh/
 天津文艺,http://38.75.136.137:98/gslb/dsdqpub/tjtv2.m3u8?auth=testpub
 
-山东文旅,http://123.235.61.39:4000/rtp/239.253.254.160:8000
+峨眉电影,http://183.223.157.33:85/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 北京文艺,http://k.061899.xyz/m.php?id=bjwy#http://38.75.136.137:98/gslb/dsdqpub/btv2.m3u8?auth=testpub#http://106.53.99.30/tv/bj.php?id=bjwy
 龙华电影,http://iptv.4666888.xyz/iptv2A.php?id=45
 龙华电影,http://rihou.cc:555/tv/[Pd]龙华电影
