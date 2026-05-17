@@ -5,7 +5,7 @@
         {
             "name": "青岛电视",
             "type": 0,
-            "url": "https://my520.netlify.app/qdyd.nzk",
+            "url": "https://nauxij.guthub.io/qdyd.nzk",
             "playerType": 2,
             "ua": "okhttp/3",
             "epg": "http://epg.51zmt.top:8000/e1.xml",
