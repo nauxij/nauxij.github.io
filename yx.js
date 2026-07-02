@@ -14,7 +14,7 @@ const classIconMap = {
     "02605271508": "https://nauxij.github.io/yan1.jpg",
     "0260612": "https://nauxij.github.io/yan2.jpg",
     "026061218650": "https://nauxij.github.io/Popc.jpg",
-    "今生最酷合影": "https://nauxij.github.io/%E4%BB%8A%E7%94%9F%E6%9C%80%E9%85%B7%E5%90%88%E5%90%88.jpg",
+    "今生最酷合影": "https://nauxij.github.io/%E4%BB%8A%E7%94%9F%E6%9C%80%E9%85%B7%E5%90%88%E5%BD%B1.jpg",
     "Popc": "https://nauxij.github.io/Popc.jpg"
 };
 
