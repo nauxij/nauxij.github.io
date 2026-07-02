@@ -10,10 +10,10 @@ var processedHosts = new Set();
 
 // ========== 自定义分类图标配置区 ==========
 const classIconMap = {
-    "你咋那么美": "https://nauxij.github.io/%E4%BD%A0%E5%92%8B%E4%B9%88%E4%B9%88.jpg",
-    "02605271508": "https://nauxij.github.io/02605271508.jpg",
-    "0260612": "https://nauxij.github.io/0260612.jpg",
-    "026061218650": "https://my521.netlify.app/cover3.jpg",
+    "你咋那么美": "https://nauxij.github.io/yan.jpg",
+    "02605271508": "https://nauxij.github.io/yan1.jpg",
+    "0260612": "https://nauxij.github.io/yan2.jpg",
+    "026061218650": "https://nauxij.github.io/Popc.jpg",
     "今生最酷合影": "https://nauxij.github.io/%E4%BB%8A%E7%94%9F%E6%9C%80%E9%85%B7%E5%90%88%E5%90%88.jpg",
     "Popc": "https://nauxij.github.io/Popc.jpg"
 };
