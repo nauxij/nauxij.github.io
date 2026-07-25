@@ -159,14 +159,6 @@
     ],
     "sites": [
         {
-            "key": "欲岩满",
-            "name": "欲岩丨电视丨直播",
-            "type": 3,
-            "searchable": 0,
-            "changeable": 0,
-            "api": "https://gitee.com/x21y/yx/raw/main/yx.js"
-        },
-        {
             "key": "壹路坦途",
             "name": "%E6%%91%E4%A5%EF%BC%8E6%B18%89%E%AD%E9%99%AA%E4%%E4%B8%80%%A8%8B",
             "type": 3,
