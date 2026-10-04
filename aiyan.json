@@ -1,6 +1,6 @@
 {
     "warningText": "资源来自网络，无盈利纯技术分享！[所有内容仅供学习使用，请勿用于违法及商业用途，请勿付费购买]",
-    "logo": "https://gitee.com/x21y/duo/raw/master/6.gif",
+    "logo": "https://gitee.com/x21y/duo/raw/master/3.gif",
     "lives": [
         {
             "name": "青岛电视",
@@ -13,14 +13,6 @@
         }
     ],
     "sites": [
-         {
-            "key": "欲岩满",
-            "name": "遇岩缘👩‍❤️‍👨莫强求",
-            "type": 3,
-            "searchable": 0,
-            "changeable": 0,
-            "api": "https://gitee.com/x21y/yx/raw/main/yx.js"
-        },
         {
             "key": "壹💥路坦途💥",
             "name": "%E6%%91%E4%A5%EF%BC%8E6%B18%89%E%AD%E9%99%AA%E4%%E4%B8%80%%A8%8B",
